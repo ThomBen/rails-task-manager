@@ -1,1 +1,23 @@
-<h1>Hello There</h1>
+<div class="flex container border border rounded shadow-lg p-3 mb-5">
+<h1>My Tasks</h1>
+<% @tasks.each do |task| %>
+    <div class="row ">
+  <h3>
+    <% if task.completed %>
+      <i class="far fa-check-square"></i>
+    <% else %>
+      <i class="far fa-square"></i>
+    <% end %>
+    <%= link_to task_path(task) do %>
+      <%= task.title.capitalize %>
+    <% end %>
+    <%= link_to task_path(task), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } do %>
+     <i class="far fa-trash-alt"></i>
+      <%=  %>
+     <% end %>
+  </h3>
+  </div>
+<% end %>
+
+<h3><%= link_to "Create a new task", new_path %></h3>
+</div>

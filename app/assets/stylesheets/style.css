@@ -1,0 +1,25 @@
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+  color: #4B5358;
+}
+
+a:hover {
+  color: #104547;
+}
+
+body {
+  background-color: #AF929D;
+}
+
+.container {
+  margin-top: 150px;
+  background-color: #D3D5D4;
+}
+
+h4 {
+  text-align: center;
+}
